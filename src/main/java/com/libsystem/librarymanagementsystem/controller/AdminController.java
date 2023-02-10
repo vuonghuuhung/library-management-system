@@ -1,5 +1,6 @@
 package com.libsystem.librarymanagementsystem.controller;
 
+import com.libsystem.librarymanagementsystem.database.BookDAO;
 import com.libsystem.librarymanagementsystem.model.Book;
 import com.libsystem.librarymanagementsystem.model.User;
 import com.libsystem.librarymanagementsystem.service.BookService;
@@ -22,6 +23,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -48,6 +50,9 @@ public class AdminController extends GuessController {
     private void AHPAccount(ActionEvent event) {
         loadPage("admin-self-info");
     }
+
+    @FXML
+    private void AHPStatistic(ActionEvent event) { loadPage("admin-statistical"); }
 
     @FXML
     private void AHPLogout(ActionEvent event) {
@@ -112,6 +117,13 @@ public class AdminController extends GuessController {
             SIDateOfBirthTF.setText(userSession.getDateOfBirth());
             SIPhoneNumberTF.setText(userSession.getPhoneNumber());
             SIGenderTF.setText(userSession.getGender());
+        }
+        if (ASViewAP != null) {
+            BookDAO bookDAO = new BookDAO();
+            ArrayList<Book> books = bookDAO.showAllBook();
+            ASNumOfBooksLB.setText(String.valueOf(books.size()));
+            ASBorrowingBookLB.setText(String.valueOf(bookDAO.getBorrowingBook()));
+            ASBorrowingLateBooksLB.setText(String.valueOf(bookDAO.getBorrowingLateBook()));
         }
     }
 
@@ -293,4 +305,16 @@ public class AdminController extends GuessController {
 
         }
     }
+
+    /**
+     * Controller of admin-statistical.fxml
+     */
+    @FXML
+    private AnchorPane ASViewAP;
+    @FXML
+    private Label ASNumOfBooksLB;
+    @FXML
+    private Label ASBorrowingBookLB;
+    @FXML
+    private Label ASBorrowingLateBooksLB;
 }

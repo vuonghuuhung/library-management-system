@@ -508,4 +508,53 @@ public class BookDAO {
         }
         return false;
     }
+
+    public int getBorrowingBook() {
+        String sql = """
+                select Count(bb.BorrowNoteID) as 'borrowing'
+                from TB_BorrowBook bb, TB_BorrowNote bn
+                where bb.BorrowNoteID = bn.BorrowNoteID\s
+                and bn.Status = 'Borrowing'""";
+        try {
+            connection = DataAccess.getConnection();
+            assert connection != null;
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) return resultSet.getInt("borrowing");
+        } catch (SQLException e) {
+            System.out.println("Query request failed.");
+        } finally {
+            DataAccess.closeConnection(connection);
+            DataAccess.closePreparedStatement(preparedStatement);
+            DataAccess.closeResultSet(resultSet);
+        }
+
+        return 0;
+    }
+
+    public int getBorrowingLateBook() {
+        String sql = """
+                SELECT Count(bb.BorrowNoteID) as 'late'
+               FROM TB_BorrowBook bb, TB_BorrowNote bn
+               where bb.BorrowNoteID = bn.BorrowNoteID\s
+               and bn.Status = 'Borrowing'\s
+               AND DATEDIFF(day, bn.PromisedReturnDate, GETDATE()) > 0""";
+        try {
+            connection = DataAccess.getConnection();
+            assert connection != null;
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) return resultSet.getInt("late");
+        } catch (SQLException e) {
+            System.out.println("Query request failed.");
+        } finally {
+            DataAccess.closeConnection(connection);
+            DataAccess.closePreparedStatement(preparedStatement);
+            DataAccess.closeResultSet(resultSet);
+        }
+
+        return 0;
+    }
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ASViewAP" prefHeight="540.0" prefWidth="760.0" style="-fx-background-color: #def3f6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.AdminController">
+   <children>
+      <Label layoutX="97.0" layoutY="114.0" text="Tổng số sách:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="236.0" text="Số sách đang mượn:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="374.0" text="Số sách đang mượn trễ:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="ASNumOfBooksLB" layoutX="512.0" layoutY="114.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="ASBorrowingBookLB" layoutX="512.0" layoutY="236.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="ASBorrowingLateBooksLB" layoutX="512.0" layoutY="374.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
