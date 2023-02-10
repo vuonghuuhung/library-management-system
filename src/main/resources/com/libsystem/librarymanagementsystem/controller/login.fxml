@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LoginPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #def3f6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.LoginController">
+   <children>
+      <Pane layoutX="335.0" layoutY="210.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="210.0">
+         <children>
+            <Label alignment="CENTER" layoutY="4.0" text="Tên đăng nhập">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="34.0" text="Mật khẩu">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="LGUsernameTF" layoutX="141.0" layoutY="6.0" />
+            <PasswordField fx:id="LGPasswordPF" layoutX="141.0" layoutY="39.0" />
+            <Button fx:id="LGLoginBTN" alignment="CENTER" layoutX="178.0" layoutY="81.0" mnemonicParsing="false" onAction="#LGLogin" style="-fx-background-color: #76b6c4;" text="Đăng nhập">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="LGReaderBTN" alignment="CENTER" layoutX="7.0" layoutY="81.0" mnemonicParsing="false" onAction="#LGReader" style="-fx-background-color: #76b6c4;" text="Bạn là độc giả">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

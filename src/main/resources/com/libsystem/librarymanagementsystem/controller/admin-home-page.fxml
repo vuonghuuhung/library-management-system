@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="HPContainerBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.AdminController">
+    <center>
+        <AnchorPane fx:id="HPCenterAP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #def3f6;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="142.0" layoutY="257.0" text="Chào mừng bạn đến với hệ thống quản lý thư viện LibSmart">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </center>
+    <left>
+        <BorderPane fx:id="HPLeftBP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #064273;" BorderPane.alignment="CENTER">
+            <center>
+                <Pane fx:id="HPListButtonP" prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="HPHomeBTN" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#HPHome" prefHeight="13.0" prefWidth="165.0" style="-fx-background-color: #7fcdff;" text="Trang chủ">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                  <Button fx:id="AHPUserManageBTN" layoutX="18.0" layoutY="61.0" mnemonicParsing="false" onAction="#AHPUserManage" prefHeight="13.0" prefWidth="165.0" style="-fx-background-color: #7fcdff;" text="Quản lý nhân viên">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="AHPStatisticBTN" layoutX="18.0" layoutY="108.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="165.0" style="-fx-background-color: #7fcdff;" text="Thống kê">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="HPFindBookBTN" layoutX="18.0" layoutY="156.0" mnemonicParsing="false" onAction="#HPFindBook" prefHeight="13.0" prefWidth="165.0" style="-fx-background-color: #7fcdff;" text="Tìm sách">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="18.0" layoutY="207.0" mnemonicParsing="false" onAction="#news" prefHeight="13.0" prefWidth="165.0" style="-fx-background-color: #7fcdff;" text="Tin tức">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="18.0" layoutY="255.0" mnemonicParsing="false" onAction="#introduce" prefHeight="13.0" prefWidth="165.0" style="-fx-background-color: #7fcdff;" text="Giới thiệu">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="AHPAccountBTN" layoutX="18.0" layoutY="303.0" mnemonicParsing="false" onAction="#AHPAccount" prefHeight="13.0" prefWidth="165.0" style="-fx-background-color: #7fcdff;" text="Tài khoản">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="AHPLogoutBTN" layoutX="18.0" layoutY="418.0" mnemonicParsing="false" onAction="#AHPLogout" prefHeight="13.0" prefWidth="165.0" style="-fx-background-color: #7fcdff;" text="Đăng xuất">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </Pane>
+            </center>
+         <top>
+            <HBox alignment="CENTER" prefHeight="74.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="HPWelcomeLB" text="Label" textFill="#def3f6">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+        </BorderPane>
+    </left>
+</BorderPane>

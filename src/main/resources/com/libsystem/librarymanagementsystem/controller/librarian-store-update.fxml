@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="SUViewAP" prefHeight="540.0" prefWidth="760.0" style="-fx-background-color: #def3f6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.LibrarianController">
+   <children>
+      <ImageView fitHeight="251.0" fitWidth="191.0" layoutX="47.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../image/bia-sach.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="628.0" layoutY="450.0" mnemonicParsing="false" onAction="#SUUpdateBook" style="-fx-background-color: #76b6c4;" text="Cập nhật">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="250.0" layoutY="88.0" text="Tên sách">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="129.0" text="Giá bìa">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="253.0" layoutY="169.0" text="Tác giả">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="253.0" layoutY="211.0" text="NXB">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="88.0" text="Số lượng">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="129.0" text="Thể loại">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="170.0" text="Ngôn ngữ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="210.0" text="Ngày nhập">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="SUBookNameTF" layoutX="335.0" layoutY="89.0" />
+      <TextField fx:id="SUPriceTF" layoutX="335.0" layoutY="130.0" />
+      <TextField fx:id="SUAuthorTF" layoutX="335.0" layoutY="170.0" />
+      <TextField fx:id="SUPublisherTF" layoutX="335.0" layoutY="212.0" />
+      <TextField fx:id="SUAvailableNumberTF" layoutX="595.0" layoutY="89.0" />
+      <TextField fx:id="SUTakenDateTF" layoutX="595.0" layoutY="211.0" />
+      <ComboBox fx:id="SUBookTypeCB" layoutX="595.0" layoutY="130.0" prefWidth="150.0" />
+      <ComboBox fx:id="SULanguagesCB" layoutX="595.0" layoutY="170.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

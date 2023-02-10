@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="760.0" style="-fx-background-color: #def3f6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.LibrarianController">
+   <children>
+      <Label layoutX="57.0" layoutY="109.0" text="Ngày mượn">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="148.0" text="Ngày hẹn trả">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="BRFBorrowDateTF" layoutX="190.0" layoutY="112.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="BRFPromisedReturnDateTF" layoutX="190.0" layoutY="151.0" prefHeight="25.0" prefWidth="182.0" />
+      <Button layoutX="616.0" layoutY="142.0" mnemonicParsing="false" onAction="#BRFFindNote" style="-fx-background-color: #76b6c4;" text="Tìm kiếm">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="396.0" layoutY="71.0" text="Tên độc giả">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="71.0" text="Mã độc giả">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="BRFReaderNameTF" layoutX="533.0" layoutY="72.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="BRFReaderIDTF" layoutX="190.0" layoutY="72.0" prefHeight="25.0" prefWidth="182.0" />
+      <TableView fx:id="BRFBorrowNoteTV" layoutX="55.0" layoutY="281.0" prefHeight="221.0" prefWidth="658.0" style="-fx-background-color: #064273;">
+         <columns>
+            <TableColumn fx:id="BRFNoteIDTC" prefWidth="118.0" text="Mã phiếu mượn" />
+            <TableColumn fx:id="BRFReaderNameTC" prefWidth="180.0" text="Tên độc giả" />
+            <TableColumn fx:id="BRFReaderIDTC" minWidth="0.0" prefWidth="140.0" text="Mã độc giả" />
+            <TableColumn fx:id="BRFStatusTC" minWidth="0.0" prefWidth="219.0" text="Tình trạng" />
+         </columns>
+      </TableView>
+      <Label layoutX="55.0" layoutY="242.0" text="Kết quả tìm kiếm">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="411.0" layoutX="303.0" layoutY="256.0" startX="-100.0" />
+   </children>
+</AnchorPane>

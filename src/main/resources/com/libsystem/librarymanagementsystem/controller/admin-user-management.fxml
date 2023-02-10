@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AUMViewAP" prefHeight="540.0" prefWidth="760.0" style="-fx-background-color: #def3f6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.AdminController">
+   <children>
+      <Label layoutX="30.0" layoutY="98.0" text="Nhập tên cần tìm">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button layoutX="355.0" layoutY="92.0" mnemonicParsing="false" onAction="#AUMFindUser" style="-fx-background-color: #76b6c4;" text="Tìm">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="417.0" layoutY="92.0" mnemonicParsing="false" onAction="#AUMAddUser" style="-fx-background-color: #76b6c4;" text="Thêm tài khoản">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label layoutX="30.0" layoutY="145.0" text="Danh sách nhân viên">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="AUMResultTV" layoutX="30.0" layoutY="183.0" prefHeight="325.0" prefWidth="705.0" style="-fx-background-color: #064273;">
+         <columns>
+            <TableColumn fx:id="AUMUserIDTC" prefWidth="215.0" text="Mã nhân viên" />
+            <TableColumn fx:id="AUMUserNameTC" prefWidth="255.0" text="Tên nhân viên" />
+            <TableColumn fx:id="AUMUserRoleTC" prefWidth="229.0" text="Vai trò" />
+         </columns>
+      </TableView>
+      <Line endX="420.0" layoutX="307.0" layoutY="159.0" startX="-100.0" />
+      <Button layoutX="574.0" layoutY="92.0" mnemonicParsing="false" onAction="#AUMShowAllUser" style="-fx-background-color: #76b6c4;" text="Hiển thị tất cả">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="AUMFindingPhraseTF" layoutX="180.0" layoutY="99.0" prefHeight="25.0" prefWidth="158.0" />
+   </children>
+</AnchorPane>

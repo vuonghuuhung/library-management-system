@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="BRMViewAP" prefHeight="540.0" prefWidth="760.0" style="-fx-background-color: #def3f6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.LibrarianController">
+   <children>
+      <ImageView fitHeight="99.0" fitWidth="92.0" layoutX="122.0" layoutY="90.0" onMouseClicked="#BRMUpdateBorrowNote" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../image/update-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="99.0" fitWidth="92.0" layoutX="334.0" layoutY="90.0" onMouseClicked="#BRMAddBorrowNote" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../image/add-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="99.0" fitWidth="92.0" layoutX="542.0" layoutY="90.0" onMouseClicked="#BRMFindBorrowNote" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../image/find-icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="90.0" layoutY="211.0" onMouseClicked="#BRMUpdateBorrowNote" text="Cập nhật phiếu mượn">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="211.0" onMouseClicked="#BRMAddBorrowNote" text="Thêm phiếu mượn">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="501.0" layoutY="211.0" onMouseClicked="#BRMFindBorrowNote" text="Tìm kiếm phiếu mượn">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="270.0" text="Cảnh báo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="425.0" layoutX="294.0" layoutY="284.0" startX="-164.0" />
+      <TableView fx:id="BRMBorrowNoteTV" layoutX="40.0" layoutY="302.0" prefHeight="216.0" prefWidth="682.0" style="-fx-background-color: #064273;">
+         <columns>
+            <TableColumn fx:id="BRMBorrowNoteIDTC" prefWidth="215.0" text="Mã phiếu mượn" />
+            <TableColumn fx:id="BRMReaderIDTC" prefWidth="255.0" text="Mã độc giả" />
+            <TableColumn fx:id="BRMPromiseDateTC" prefWidth="229.0" text="Ngày hẹn" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

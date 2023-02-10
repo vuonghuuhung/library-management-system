@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AFBViewAP" prefHeight="540.0" prefWidth="760.0" style="-fx-background-color: #def3f6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.GuessController">
+   <children>
+      <Label layoutX="29.0" layoutY="72.0" text="Tên sách">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="104.0" text="Tên tác giả">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="136.0" text="Nhà xuất bản">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="172.0" text="Ngôn ngữ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="72.0" text="Ngày nhập">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="104.0" text="Giá bìa">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="136.0" text="Thể loại">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="214.0" text="Kết quả tìm kiếm">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="AFBBookNameTF" layoutX="164.0" layoutY="73.0" prefHeight="25.0" prefWidth="189.0" />
+      <TextField fx:id="AFBAuthorTF" layoutX="164.0" layoutY="105.0" prefHeight="25.0" prefWidth="189.0" />
+      <TextField fx:id="AFBPublisherTF" layoutX="164.0" layoutY="137.0" prefHeight="25.0" prefWidth="189.0" />
+      <TextField fx:id="AFBTakenDateTF" layoutX="494.0" layoutY="73.0" prefHeight="25.0" prefWidth="189.0" />
+      <TextField fx:id="AFBPriceTF" layoutX="494.0" layoutY="105.0" prefHeight="25.0" prefWidth="189.0" />
+      <Button fx:id="AFBFindBookBTN" layoutX="534.0" layoutY="168.0" mnemonicParsing="false" onAction="#AFBFindBook" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #76b6c4;" text="Tìm kiếm">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Line endX="486.0" layoutX="240.0" layoutY="227.0" startX="-58.0" />
+      <TableView fx:id="AFBResultTV" layoutX="31.0" layoutY="247.0" prefHeight="270.0" prefWidth="700.0" style="-fx-background-color: #064273;">
+         <columns>
+            <TableColumn fx:id="AFBBookIDTC" prefWidth="62.0" text="Mã sách" />
+            <TableColumn fx:id="AFBBookNameIDTC" prefWidth="218.0" text="Tên sách" />
+            <TableColumn fx:id="AFBAuthorIDTC" prefWidth="146.0" text="Tác giả" />
+            <TableColumn fx:id="AFBBookTypeIDTC" prefWidth="99.0" text="Thể loại" />
+            <TableColumn fx:id="AFBLanguageIDTC" prefWidth="123.0" text="Ngôn ngữ" />
+            <TableColumn fx:id="AFBAvailableIDTC" prefWidth="54.0" text="Còn lại" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="AFBLanguageCB" layoutX="164.0" layoutY="175.0" prefHeight="25.0" prefWidth="189.0" />
+      <ComboBox fx:id="AFBBookTypeCB" layoutX="494.0" layoutY="137.0" prefHeight="25.0" prefWidth="189.0" />
+   </children>
+</AnchorPane>

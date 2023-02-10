@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="RMViewAP" prefHeight="540.0" prefWidth="760.0" style="-fx-background-color: #def3f6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.LibrarianController">
+   <children>
+      <ImageView fitHeight="99.0" fitWidth="92.0" layoutX="122.0" layoutY="90.0" onMouseClicked="#RMUpdateInfo" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../image/update-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="99.0" fitWidth="92.0" layoutX="334.0" layoutY="90.0" onMouseClicked="#RMAddReader" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../image/add-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="99.0" fitWidth="92.0" layoutX="536.0" layoutY="90.0" onMouseClicked="#RMFindReader" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../image/find-icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="95.0" layoutY="211.0" onMouseClicked="#RMUpdateInfo" text="Cập nhật thông tin">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="327.0" layoutY="211.0" onMouseClicked="#RMAddReader" text="Thêm độc giả">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="211.0" onMouseClicked="#RMFindReader" text="Tìm kiếm độc giả">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="270.0" text="Mượn nhiều nhất">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="425.0" layoutX="294.0" layoutY="284.0" startX="-100.0" />
+      <TableView fx:id="RMReaderTV" layoutX="40.0" layoutY="302.0" prefHeight="216.0" prefWidth="682.0" style="-fx-background-color: #064273;">
+         <columns>
+            <TableColumn fx:id="RMReaderIDTC" prefWidth="215.0" text="Mã độc giả" />
+            <TableColumn fx:id="RMReaderNameTC" prefWidth="255.0" text="Tên độc giả" />
+            <TableColumn fx:id="RMReaderBorrowedTimesTC" prefWidth="229.0" text="Số lần mượn" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

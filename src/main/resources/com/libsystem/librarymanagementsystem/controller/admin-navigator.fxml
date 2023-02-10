@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="400.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.GuessController">
+   <children>
+      <Button fx:id="HPHomeBTN" layoutX="39.0" layoutY="14.0" mnemonicParsing="false" onAction="#HPHome" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Trang chủ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="39.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="QL Nhân viên">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="39.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Thống kê">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="39.0" layoutY="177.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Tìm sách">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="39.0" layoutY="233.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Tin tức">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="39.0" layoutY="290.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Giới thiệu ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="39.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Tài khoản">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

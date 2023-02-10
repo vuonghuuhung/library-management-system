@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="HPContainerBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libsystem.librarymanagementsystem.controller.GuessController">
+   <center>
+      <AnchorPane fx:id="HPCenterAP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #def3f6;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="142.0" layoutY="257.0" text="Chào mừng bạn đến với hệ thống quản lý thư viện LibSmart">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <BorderPane fx:id="HPLeftBP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #064273;" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="66.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="HPWelcomeLB" layoutX="63.0" layoutY="20.0" text="Xin chào!" textFill="#def3f6">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="74.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="HPLoginBTN" layoutX="39.0" layoutY="18.0" mnemonicParsing="false" onAction="#HPLogin" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Đăng nhập">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <Pane fx:id="HPListButtonP" prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="HPHomeBTN" layoutX="39.0" layoutY="20.0" mnemonicParsing="false" onAction="#HPHome" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Trang chủ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="HPFindBookBTN" layoutX="39.0" layoutY="80.0" mnemonicParsing="false" onAction="#HPFindBook" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Tìm sách">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="HPNewsBTN" layoutX="39.0" layoutY="142.0" mnemonicParsing="false" onAction="#news" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Tin tức">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="HPIntroduceBTN" layoutX="39.0" layoutY="201.0" mnemonicParsing="false" onAction="#introduce" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #7fcdff;" text="Giới thiệu">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </left>
+</BorderPane>
